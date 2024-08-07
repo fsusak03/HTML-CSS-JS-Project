@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: auto;
+}
+
+
+
+/* NAVBAR */
+/*------------------------------------------------*/
+.navbarParent ul {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 70px;
+  padding-left: 25px;
+  list-style: none;
+  margin: 0;
+  font-weight: 600;
+}
+
+.navbarParent :first-child a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.5s;
+  margin: 6px;
+}
+
+.navbarParent :last-child a:hover {
+  color: yellow;
+}
+
+.navbar img {
+  width: 16px;
+  height: 13px;
+}
+
+/*NASLOV */
+/*---------------------------------------------*/
+
+.NovostiParent {
+  text-align: center;
+  margin-top: 25px;
+  font-weight: 900;
+  font-size: 23px;
+  margin-top: 50px;
+}
+
+
+
+.orangelineParent {
+  width: 1200px;
+  height: 6px;
+  background-color: orange;
+  margin: 0 auto;
+}
+
+.Slika1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40.3vh;
+  overflow: hidden;
+  animation: dropAnimation 1.0s;
+  position: relative;
+
+
+}
+
+.text-over-image {
+  color: white;
+  font-size: 46px;
+  font-weight: 900;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40%;
+  text-align: center;
+}
+
+.Slika1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes dropAnimation {
+  from {
+    transform: translateY(-35%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes flyAnimation {
+  from {
+    transform: translateY(+120%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes flyAnimationOrange {
+  from {
+    transform: translateY(+1500%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.Tekst {
+  justify-content: center;
+  text-align: center;
+  animation: flyAnimation 1.0s;
+
+  color: black;
+  font-size: 45px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.narancasta-line {
+  animation: flyAnimationOrange 1.0s;
+
+  width: 1200px;
+  height: 5px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: orange;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.description {
+  margin-top: 100px;
+  font-size: 32px;
+  text-align: center;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  line-height: 1.5;
+}
+
+.video-container {
+  display: flex;
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  justify-content: center;
+}
+
+
+
+.zaiskridock {
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-image: url("zaiskri-bg\ copy.jpg");
+  align-items: center;
+  height: 370px;
+  justify-content: center;
+  font-size: 65px;
+  text-align: center;
+
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  -webkit-text-stroke: 00.8px rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+
+
+.redtext {
+  color: red;
+  margin-top: 50PX;
+}
+
+
+
+.gallery img:hover {
+  border-color: #f00;
+}
+
+.gallery {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery a {
+  margin: 10px;
+}
+
+.gallery img {
+  width: 400px;
+  height: 180px;
+  border-radius: 5%;
+
+}
+
+@media (max-width: 768px) {
+
+  .video-container {
+    margin-top: 60px; 
+    margin-bottom: 60px; 
+
+  }
+
+  .zaiskridock {
+    font-size: 40px; 
+    height: auto; 
+  }
+
+  .video-container video{
+width: 70%;
+height: auto;
+  }
+}

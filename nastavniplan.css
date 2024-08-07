@@ -1,0 +1,212 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+      
+  
+    .navbarParent ul {
+        background-color: black;
+        display: flex;
+        align-items:center;
+        justify-content:left;
+        height: 70px;
+        padding-left: 25px;
+        list-style: none;
+        font-weight: 600;
+      }
+      
+      .navbarParent :first-child a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;  
+        transition: color 0.5s;
+        margin: 6px;
+      }
+      .navbarParent :last-child a:hover {
+    color:yellow;
+      }
+    
+      .navbar  img{
+        width: 16px;
+        height: 13px;
+      }
+
+
+      
+#Tekst {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: 40px;
+    animation: flyAnimation 1.0s;
+
+  }
+  
+  .narancasta-line {
+  
+    width: 1200px;
+    animation: flyAnimationOrange 1.0s;
+    height: 5px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-color: orange;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+
+  @keyframes flyAnimation {
+    from {
+      transform: translateY(+120%);
+    }
+  
+    to {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes flyAnimationOrange {
+    from {
+      transform: translateY(+1500%);
+    }
+  
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes Userinputanimation {
+    from {
+      transform: translateX(+250%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+
+.zaiskridock{
+    background-repeat: no-repeat;
+      width:100%;
+      margin-top: 50px;
+     background-size: cover;
+      background-image: url("zaiskri-bg\ copy.jpg");
+      align-items:center;
+       height:500px;
+       justify-content: center;
+       font-size: 65px;
+       text-align: center;
+  
+       color:white;
+       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 00.8px rgb(0, 0, 0);
+       font-weight: 600;
+   }
+  
+
+  
+   .redtext{
+    color:red;
+    margin-top: 50PX;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 50vh; 
+    font-size: x-large;
+    font-weight: 500;
+    margin-left: 100px;
+  }
+
+  #userInput {
+    width: 252px;
+    height: 45px;
+    margin-right: 200px; 
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: Userinputanimation 2.0s;
+
+  }
+
+  #tableContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+  #table{
+    width: 650px;
+overflow-y:auto;
+  }
+ 
+
+  tr,td {
+    border: 1px  solid rgb(100, 98, 98);
+    text-align: center;
+    border-right: none;
+    background-color: rgb(245, 237, 237);
+    font-weight: 600;
+    border-left: none;
+  }
+
+
+
+  #table tr:first-child {
+    background-color: rgb(255, 255, 255); 
+}
+
+
+
+
+  
+  #autocomplete-list {
+    border: 0px s;
+    max-height: 200px;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; 
+
+    width: 252px;
+}
+#autocomplete-list li {
+    background-color: #fff;
+    padding: 5px;
+    font-size: large;
+    list-style-type: none;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+#autocomplete-list li:hover {
+    background-color: #f1f1f1;
+}
+
+.delete-button {
+  background-color: #e71e0f; 
+  border: none; 
+  color: white; 
+  padding: 10px 20px; 
+  text-align: center; 
+  font-size: 16px;
+  margin: 4px 3px;
+  border-radius: 8px;
+  cursor: pointer; 
+}
+
+.delete-button:hover {
+  background-color: #e03e32;
+}
+
+#tableFooter{
+  width: 650px;
+
+}
+

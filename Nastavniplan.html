@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <link rel="stylesheet" href="nastavniplan.css">
+    <title>Novosti</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/af273dd4e5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbarParent">
+        <ul>
+            <li id="Logout" style="display: none;"><i class="fa-sharp fa-solid fa-right-to-bracket fa-xs" style="color: #412ed1;"></i><a
+                    href="Logout.html">Log out</a></li>
+                    <li id="Username" style="display: none; "><a href="#">Username</a></li>
+
+            <li id="Prijavise"><a href="Prijavise.html">Prijavi se <i class="fa-sharp fa-solid fa-right-to-bracket fa-xs" style="color: #412ed1;"></i></a></li>
+
+            <li><i class="fa-sharp fa-solid fa-house fa-2xs" style="color: #FFD43B;"></i><a id = "homepage" href="Početna.html">Početna</a></li>
+            <li id="nastavniplan" style="display: none;"><i class="fa-solid fa-circle-info fa-2xs" style="color: #FFD43B;"></i><a
+                    href="Nastavniplan.html">Nastavni plan</a></li>
+
+            <li><i class="fa-regular fa-comments fa-xs" style="color: #FFD43B;"></i><a href="O nama.html">O nama</a></li>
+            <li><i class="fa-solid fa-circle-info fa-2xs" style="color: #FFD43B;"></i><a href="Novosti.html">Novosti</a></li>
+            <li>><i class="fa-solid fa-envelope fa-xs" style="color: #e6a519;"></i><a href="#" data-toggle="modal"
+                    data-target="#exampleModal">Kontakt</a></li>
+        </ul>
+    </nav>
+  
+
+   
+
+    <div id="Tekst">Nastavni plan</div>
+    <div class="narancasta-line"></div>
+    
+    <div class="container">
+
+        <div class="form-container">
+            <form>
+                <label for="userInput">Naziv kolegija:</label><br>
+                <input type="text" id="userInput" name="userInput"><br>
+                <ul id="autocomplete-list"></ul>
+            </form>
+        </div>
+        
+     
+
+        <div id="tableContainer">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Kolegij</th>
+                        <th>ECTS</th>
+                        <th>Sati</th>
+                        <th>Predavanja</th>
+                        <th>Vjezbe</th>
+
+                        <th>Tip</th>
+                    </tr>
+                </thead>
+            <tbody></tbody>
+                <tbody id="tableFooter">
+                    <tr>
+                        <td>Sum</td>
+                        <td id="sumEcts" style="margin-left: 1px;"></td>
+                        <td id="sumSati"></td>
+                        <td id="sumPredavanja"></td>
+                        <td id="sumvjezbe"></td>
+                    <td></td>
+                    <td></td>
+               </tr>
+                </tbody>
+            </table>
+            
+          
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalLabel">Kontaktirajte nas</h1>
+                </hr>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="https://www.fulek.com/mvc/supit/project-contact-form">
+                    <div class="form-group">
+                        <label for="FullName">Puno ime</label>
+                        <input type="text" class="form-control" id="FullName" name="FullName">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="Email" class="form-control" id="Email" name="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Importance">Vaznost poruke</label>
+                        <select class="form-control" id="Importance" name="Importance">
+                            <option>Niska</option>
+                            <option>Visoka</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="ReceiveNewsletter"
+                                name="ReceiveNewsletter" style="margin-top: 20px;">
+                            <label class="form-check-label" for="ReceiveNewsletter"
+                                style="margin-top: 14px;">Želim primati obavijesti</label>
+                        </div>
+                        <label for="Message">Poruka</label>
+                        <textarea class="form-control" id="Message" name="Message" rows="6"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Odustani</button>
+                        <button type="submit" class="btn btn-primary">Pošalji</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="zaiskridock">
+        <br>BUDI IZVRSTAN U ONOME ŠTO VOLIŠ
+        <div class="redtext">ZAISKRI</div>
+    </div>
+
+    <script src = "Authentication.js"></script>
+
+
+    <script src = "Nastavniplan.js"></script>
+
+
+ 
+
+
+
+</body>
+
+</html>

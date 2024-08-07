@@ -1,0 +1,122 @@
+/*BODY */
+/*-----------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+
+/* NAVBAR */
+/*------------------------------------------------*/
+
+
+
+.navbarParent ul {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 70px;
+  padding-left: 25px;
+  list-style: none;
+  margin: 0;
+  font-weight: 600;
+}
+
+.navbarParent :first-child a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.5s;
+  margin: 6px;
+}
+
+.navbarParent :nth-child(2) a:hover {
+  color: yellow;
+}
+
+.navbarChild3 img {
+  width: 16px;
+  height: 13px;
+
+}
+
+/* VID */
+/*------------------------------------------------*/
+
+.VidParent {
+  width: 100%;
+  height: fit-content;
+}
+
+@keyframes removeCursor {
+  to {
+    border-right: none;
+  }
+}
+
+.Textonvid1 {
+  position: absolute;
+  color: white;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 0.8px rgb(0, 0, 0);
+  font-size: 72px;
+  z-index: 1;
+  top: 45%;
+  border-right: 40px solid rgb(255, 255, 255);
+  animation: removeCursor 0.1s 9.6s forwards, blink 0.8s infinite;
+}
+
+.Textonvid2 {
+  color: red;
+  position: absolute;
+  top: 85%;
+  border-right: 40px solid rgb(255, 255, 255);
+  animation: removeCursor 0.1s 2.6s forwards, blink 0.8s infinite;
+}
+
+
+
+
+.video-container {
+
+  display: flex;
+  justify-content: center;
+}
+
+
+@keyframes blink {
+  0% {
+    border-color: rgb(255, 255, 255);
+  }
+
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+
+@media (max-width: 768px) {
+  .Textonvid1 {
+    font-size: 40px; 
+    top: 40%; 
+
+  }
+  .Textonvid2 {
+    font-size: 24px; 
+    top: 70%; 
+   
+  }
+
+  .VidParent{
+     width:300%;
+     height: auto;
+  }
+}

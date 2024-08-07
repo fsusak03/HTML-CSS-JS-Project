@@ -1,0 +1,28 @@
+document.querySelector("#registerBtn").addEventListener("click", () => {
+    const registerData = {
+        username: document.querySelector("#username").value,
+        password: document.querySelector("#password").value,
+    };
+
+    register(registerData);
+});
+
+function register(registerData) {
+    fetch("https://www.fulek.com/data/api/user/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(registerData),
+    })
+        .then((response) => response.json())
+        .then((result) => {
+            if (result.isSuccess) {
+                sessionStorage.setItem("JWT", result.data.token);
+                location.assign("Prijavise.html");
+            } else {
+                alert(result.errorMessages[0]);
+            }
+        })
+        .catch((error) => alert("Registration succes!"));
+}
